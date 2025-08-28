@@ -113,3 +113,185 @@ Prediction time remains almost constant with respect to M, suggesting independen
 
 Conclusion:
 The observed experimental trends are consistent with the theoretical complexities. Training scales as O(M·N·log N), while prediction scales approximately as O(log N) with little to no dependence on M.
+
+
+
+Here is the data -
+
+Evaluating for N=50, M=1
+
+    Input Type: real, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.1296 seconds (std: 0.0032)
+        Average Prediction Time: 0.0015 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.1871 seconds (std: 0.0051)
+        Average Prediction Time: 0.0015 seconds (std: 0.0000)
+
+    Input Type: real, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.0002 seconds (std: 0.0002)
+        Average Prediction Time: 0.0002 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 0.0002 seconds (std: 0.0000)
+        Average Prediction Time: 0.0002 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.0024 seconds (std: 0.0014)
+        Average Prediction Time: 0.0008 seconds (std: 0.0004)
+    Criteria: gini_index
+        Average Training Time: 0.0026 seconds (std: 0.0001)
+        Average Prediction Time: 0.0007 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.0002 seconds (std: 0.0000)
+        Average Prediction Time: 0.0002 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 0.0002 seconds (std: 0.0000)
+        Average Prediction Time: 0.0002 seconds (std: 0.0000)
+
+==================================================
+
+Evaluating for N=50, M=5
+
+    Input Type: real, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.3035 seconds (std: 0.0157)
+        Average Prediction Time: 0.0015 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.4299 seconds (std: 0.0061)
+        Average Prediction Time: 0.0015 seconds (std: 0.0001)
+
+    Input Type: real, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.5988 seconds (std: 0.0127)
+        Average Prediction Time: 0.0014 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.4794 seconds (std: 0.0158)
+        Average Prediction Time: 0.0013 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.0526 seconds (std: 0.0036)
+        Average Prediction Time: 0.0023 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.0653 seconds (std: 0.0030)
+        Average Prediction Time: 0.0022 seconds (std: 0.0003)
+
+    Input Type: discrete, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.0946 seconds (std: 0.0052)
+        Average Prediction Time: 0.0023 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.0720 seconds (std: 0.0025)
+        Average Prediction Time: 0.0022 seconds (std: 0.0001)
+
+==================================================
+
+Evaluating for N=50, M=10
+
+    Input Type: real, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.5106 seconds (std: 0.0065)
+        Average Prediction Time: 0.0014 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 0.7355 seconds (std: 0.0125)
+        Average Prediction Time: 0.0014 seconds (std: 0.0001)
+
+    Input Type: real, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 1.0217 seconds (std: 0.0245)
+        Average Prediction Time: 0.0013 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 0.8635 seconds (std: 0.0239)
+        Average Prediction Time: 0.0014 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.0908 seconds (std: 0.0044)
+        Average Prediction Time: 0.0023 seconds (std: 0.0005)
+    Criteria: gini_index
+        Average Training Time: 0.1107 seconds (std: 0.0073)
+        Average Prediction Time: 0.0024 seconds (std: 0.0001)
+
+    Input Type: discrete, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.1734 seconds (std: 0.0068)
+        Average Prediction Time: 0.0024 seconds (std: 0.0007)
+    Criteria: gini_index
+        Average Training Time: 0.1378 seconds (std: 0.0065)
+        Average Prediction Time: 0.0022 seconds (std: 0.0001)
+
+==================================================
+
+Evaluating for N=50, M=20
+
+    Input Type: real, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.9784 seconds (std: 0.0186)
+        Average Prediction Time: 0.0016 seconds (std: 0.0005)
+    Criteria: gini_index
+        Average Training Time: 1.3434 seconds (std: 0.0161)
+        Average Prediction Time: 0.0014 seconds (std: 0.0000)
+
+    Input Type: real, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 1.8722 seconds (std: 0.0229)
+        Average Prediction Time: 0.0014 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 1.5865 seconds (std: 0.0326)
+        Average Prediction Time: 0.0015 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.1568 seconds (std: 0.0047)
+        Average Prediction Time: 0.0023 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 0.2104 seconds (std: 0.0051)
+        Average Prediction Time: 0.0024 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.2845 seconds (std: 0.0072)
+        Average Prediction Time: 0.0023 seconds (std: 0.0003)
+    Criteria: gini_index
+        Average Training Time: 0.2252 seconds (std: 0.0055)
+        Average Prediction Time: 0.0023 seconds (std: 0.0000)
+
+==================================================
+
+Evaluating for N=50, M=50
+
+    Input Type: real, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 2.2646 seconds (std: 0.0249)
+        Average Prediction Time: 0.0015 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 3.1730 seconds (std: 0.0349)
+        Average Prediction Time: 0.0015 seconds (std: 0.0000)
+
+    Input Type: real, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 4.5647 seconds (std: 0.0487)
+        Average Prediction Time: 0.0014 seconds (std: 0.0000)
+    Criteria: gini_index
+        Average Training Time: 3.8924 seconds (std: 0.0629)
+        Average Prediction Time: 0.0012 seconds (std: 0.0000)
+
+    Input Type: discrete, Output Type: real
+    Criteria: information_gain
+        Average Training Time: 0.3930 seconds (std: 0.0130)
+        Average Prediction Time: 0.0027 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.5094 seconds (std: 0.0120)
+        Average Prediction Time: 0.0026 seconds (std: 0.0001)
+
+    Input Type: discrete, Output Type: discrete
+    Criteria: information_gain
+        Average Training Time: 0.7780 seconds (std: 0.0331)
+        Average Prediction Time: 0.0027 seconds (std: 0.0001)
+    Criteria: gini_index
+        Average Training Time: 0.6181 seconds (std: 0.0247)
+        Average Prediction Time: 0.0028 seconds (std: 0.0001)
