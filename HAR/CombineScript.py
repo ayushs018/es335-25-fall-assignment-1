@@ -14,8 +14,8 @@ import numpy as np
 import os
 
 # Give the path of the test and train folder of UCI HAR Dataset
-train_path = "./UCI HAR Dataset/train"
-test_path = "./UCI HAR Dataset/test"
+train_path = "train"
+test_path = "test"
 
 # Dictionary of activities. Provided by the dataset.
 ACTIVITIES = {

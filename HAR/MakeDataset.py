@@ -32,10 +32,13 @@ dataset_dir = os.path.join(combined_dir,"Train")
 
 for folder in folders:
     files = os.listdir(os.path.join(dataset_dir,folder))
-
     for file in files:
-
-        df = pd.read_csv(os.path.join(dataset_dir,folder,file),sep=",",header=0)
+        # Skip hidden files or folders like .ipynb_checkpoints
+        if file.startswith('.'):
+            continue
+    
+        file_path = os.path.join(dataset_dir, folder, file)
+        df = pd.read_csv(file_path, sep=",", header=0)
         df = df[offset:offset+time*50]
         X_train.append(df.values)
         y_train.append(classes[folder])
@@ -68,19 +71,17 @@ y_test = np.array(y_test)
                                                 # Final Dataset
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-# USE THE BELOW GIVEN DATA FOR TRAINING and TESTING purposes
+# USE THE BELOW GIVEN DATA FOR TRAINING, TESTING, AND VALIDATION purposes
 
 # concatenate the training and testing data
 X = np.concatenate((X_train,X_test))
 y = np.concatenate((y_train,y_test))
 
-# split the data into training and testing sets. Change the seed value to obtain different random splits.
-seed = 4
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,random_state=seed,stratify=y)
-
-print("Training data shape: ",X_train.shape)
-print("Testing data shape: ",X_test.shape)
+# split the data into training,testing, and validation sets
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.4,random_state=4,stratify=y)
+X_test,X_val,y_test,y_val = train_test_split(X_test,y_test,test_size=0.5,random_state=4,stratify=y_test)
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-
+print(X_train)
+print(y_train)
