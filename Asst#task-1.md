@@ -30,7 +30,7 @@ Ans : We created the dataset using the code provided. This is the Scatter plot o
 Shape of X: (100, 2)   
 Shape of y: (100,)
 
-![alt text](/Users/ankitkumar/M_L/es335-25-fall-assignment-1/Figure_1.png)
+![alt text](/Figure_1.png)
 
 Now we have split the data as 70% for training and remaining 30% for testing purposes.     
 Shape of X_train: (70, 2)   
@@ -88,8 +88,8 @@ Our implementation, while educational, still provides a relatively reasonable fi
 
 Ans : 
 
-![alt text](/Users/ankitkumar/M_L/es335-25-fall-assignment-1/Figure_2.png)
-![alt text](/Users/ankitkumar/M_L/es335-25-fall-assignment-1/Figure_3.png)
+![alt text](/Figure-2.png)
+![alt text](/Figure-3.png)
 
 From the graphs, we can observe that prediction times for datasets with real-valued inputs are significantly higher compared to those with discrete inputs.
 
